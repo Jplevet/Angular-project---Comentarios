@@ -1,14 +1,19 @@
 var app = angular.module("MiPrimerApp", []);
 app.controller("Primercontrolador", function($scope){
     $scope.nombre = "Juan";
+    $scope.nuevoComentario = {};
     $scope.comentarios = [
         {
-            comentarios: "Buen ejemplo",
+            comentario: "Buen ejemplo",
             username: "Jplevet"
         },
         {
-            comentarios: "Mal ejemplo",
+            comentario: "Mal ejemplo",
             username: "Otro_Usuario"
         }
     ];
+    $scope.agregarComentario = function(){
+      $scope.comentarios.push($scope.nuevoComentario);
+      $scope.nuevoComentario =  {};
+    };
 });

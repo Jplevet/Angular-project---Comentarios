@@ -8,12 +8,13 @@
         <script src="js/comentarios.js"></script>
     </head>
     <body ng-controller="Primercontrolador">
-        <input type="text" ng-model="nombre">
+        <input type="text" ng-model="nuevoComentario.comentario"><br>
+        <input type="text" ng-model="nuevoComentario.username"><br>
+        <button ng-click="agregarComentario()">Agregar Comentario</button>
         <h3>Comentarios</h3>
         <ul>
-            <li ng-repeat="comentarios in comentarios ">
-                {{comentarios.comentarios}} - <strong>{{comentarios.username}}</strong>
-                
+            <li ng-repeat="comentario in comentarios">
+                {{comentario.comentario}} - <strong>{{comentario.username}}</strong>                
             </li>
         </ul>
     </body>
